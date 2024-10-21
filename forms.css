@@ -1,0 +1,125 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url('store/dashboard.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar {
+    width: 100%;
+    padding: 10px;
+    margin: 1px;
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff914d;
+}
+
+.navbar img {
+    height: 50px;
+    margin-left: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    transition: 0.5s;
+    color: black;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 300px;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ff914d;
+    border: none;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #004fc6;
+    color: white;
+    transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 40px;
+    }
+
+    button {
+        width: 150px;
+        font-size: 16px;
+    }
+
+    input {
+        width: 250px;
+        font-size: 16px;
+    }
+}

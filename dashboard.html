@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/jpg" href="store/logo.jpg">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="banner">
+        <!-- Navigation bar -->
+        <div class="navbar">
+            <img src="store/logo.jpg" height="100px" alt="Store Logo">
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <!-- Main content section -->
+        <div class="content">
+            <h1>Sri Venkateshwara Department Stores</h1>
+            <div>
+                <!-- Admin and Customer buttons -->
+                <button type="button" id="adminButton">Admin</button>
+                <button type="button" id="customerButton">Customer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for handling redirection -->
+    <script>
+        // Simulate checking user login status (you can replace this with actual logic)
+        function isLoggedIn() {
+            return localStorage.getItem('isLoggedIn') === 'true'; // Checking if the user is logged in
+        }
+
+        // Handle Admin button click
+        document.getElementById('adminButton').addEventListener('click', function() {
+            // Redirect to admin login page
+            window.location.href = 'adminlogin.html';  // This redirects the user to the admin login page
+        });
+
+        // Handle Customer button click
+        document.getElementById('customerButton').addEventListener('click', function() {
+            if (isLoggedIn()) {
+                // If user is logged in, redirect to customer page (nstore.html)
+                window.location.href = 'nstore.html';
+            } else {
+                // If not logged in, redirect to login page
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+</html>

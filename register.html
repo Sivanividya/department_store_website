@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="icon" type="image/jpg" href="store/logo.jpg">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="store/logo.jpg" height="100px" alt="Store Logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Register</h1>
+            <form id="registrationForm" class="form-box">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for handling form submission and redirecting -->
+    <script>
+        // Listen for the form submit event
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the default form submission
+
+            // Get form data
+            const formData = new FormData(this);
+            const fullName = formData.get('fullname');
+            const email = formData.get('email');
+            const password = formData.get('password');
+            const confirmPassword = formData.get('confirm_password');
+
+            // Validate the form data (e.g., password match)
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            // Simulate successful registration (could be an AJAX request to the server)
+            console.log('Registration successful for:', fullName, email);
+
+            // After successful registration, redirect to the login page
+            setTimeout(function() {
+                window.location.href = "nstore.html";  // Redirect to login page
+            }, 1000);  // Simulate delay before redirecting
+        });
+    </script>
+</body>
+</html>

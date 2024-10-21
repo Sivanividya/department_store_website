@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grocery and Kitchen</title>
+        <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='images/WhatsApp Image 2024-08-17 at 21.23.32_e625063c.jpg') }}">     
+    <link rel="stylesheet" href="static/css/groceries.css">
+    <style>
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: url('static/images/WhatsApp Image 2024-08-18 at 00.22.51_7e88ef75.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+
+    </head>
+    <body>
+        <script>
+            function showalert(){
+                alert("vegetables anf Fruits are measured in kg(kilo grams)");
+            }
+        </script>
+        <div class="banner">
+            <div class="navbar">
+                <img src="static/images/WhatsApp Image 2024-08-17 at 21.23.32_e625063c.jpg" height="100px">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('snacks') }}">Snacks_Drinks</a></li>
+                    <li><a href="{{ url_for('beauty') }}">Personal_care</a></li>
+                    <li><a href="{{ url_for('house') }}">House_Hold</a></li>
+                    <li><a href="{{ url_for('toys') }}">Toys_Stationary</a></li>
+                    <li><a href="{{ url_for('cart') }}">Cart</a></li>
+
+                </ul>
+            </div>
+            <div class="content">
+                <h1>Grocery and Kitchen</h1>
+                <div>
+                    <a href="{{ url_for('vege') }}"><button type="button" onclick="showalert()">Vegetables<br>and<br>Fruits</button></a>
+                    <a href="{{ url_for('dairy') }}"><button type="button">Dairy Items<br><br></button></a>
+                    <a href="{{ url_for('cereal') }}"><button type="button">Cereals<br>and<br>Breakfast</button></a>
+                    <a href="{{ url_for('atta') }}"><button type="button">Atta Rice and Dals</button></a>
+                    <a href="{{ url_for('oils') }}"><button type="button">Oils<br>and<br>Ghee</button></a>
+                    <a href="{{ url_for('masalas') }}"><button type="button"><br>Masalas<br><br></button></a>
+                    <a href="{{ url_for('dry') }}"><button type="button">Dry<br>Fruits<br><br></button></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

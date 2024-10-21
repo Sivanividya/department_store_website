@@ -1,0 +1,106 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+
+.banner{
+    width:100%;
+    height: 100vh;
+    background-position: center;
+    background-size: center;
+    background-image: url('static/images/WhatsApp Image 2024-08-18 at 00.22.51_7e88ef75.jpg'),linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    background-size: fit-content;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.navbar{
+    width:100%;
+    padding:10px;
+    margin:0px;
+    display:flex;
+    text-align: right;
+    align-items:center;
+    justify-content:space-around;
+    background-color:#ff914d;
+}
+.logo{
+    width:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
+.navbar ul li{
+    list-style:none;
+    display:inline-block;
+    margin:20px;
+}
+.navbar ul li a{
+    text-decoration:none;
+    text-transform:uppercase;
+    color:white;
+    font-weight: 600;
+    padding:3px;
+}
+li a:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+.navbar a:hover{
+    color:black;
+}
+.content{
+    width:100%;
+    position: absolute;
+    text-decoration: wavy;
+    color: white;
+    top:45%;
+    transform:translateY(-50%);
+    text-align: center;
+}
+.content h1{
+    margin-top:80px;
+    font-size:60px;
+    font-weight:800;
+}
+button{
+    width:120px;
+    height:150x;
+    padding:10px;
+    margin:40px;
+    text-align:center;
+    border-radius:15px;
+    box-sizing: border-box;
+    background-color:#ff914d;
+    border-color:black;
+    font-size:20px ;
+    font-family:'Times New Roman', Times, serif;
+    cursor:pointer;
+    font-weight: 600;
+}
+button:hover{
+    background: rgb(0,15s,226);
+    transition: 0.5s;
+}
+button:hover{
+    color:white;
+}
+/* Search form styles */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+#search-box {
+    width: 200px;
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-form .vege-search {
+    display: none; /* Hide the label */
+}

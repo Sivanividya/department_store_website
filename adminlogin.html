@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/jpg" href="store/logo.jpg">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="store/logo.jpg" height="100px" alt="Store Logo">
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Login</h1>
+            <form id="loginForm" class="form-box">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <br><br>
+            <p class="text-center mt-3">Don't have an account?<br><br><a href="register.html">Register here</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for login and redirection -->
+    <script>
+        // Static admin credentials
+        const adminEmail = "svds@gmail.com";
+        const adminPassword = "svds123";
+
+        // Function to handle login
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the default form submission
+
+            // Get form data
+            const formData = new FormData(this);
+            const email = formData.get('email');
+            const password = formData.get('password');
+
+            // Check if it's admin login
+            if (email === adminEmail && password === adminPassword) {
+                // Save login state to localStorage for admin
+                localStorage.setItem('isAdminLoggedIn', 'true');
+                alert('Admin login successful! Redirecting to admin dashboard...');
+                window.location.href = "admin.html";  // Redirect to admin dashboard page
+            } else if (email === "test@example.com" && password === "password123") {
+                // Simulate user login (can be replaced with server-side validation)
+                localStorage.setItem('isLoggedIn', 'true');
+                window.location.href = "nstore.html";  // Redirect to customer page
+            } else {
+                alert('Invalid email or password.');
+            }
+        });
+
+        // For testing purposes: Reset login state (optional)
+        // localStorage.setItem('isLoggedIn', 'false');  // Use this to reset login status
+    </script>
+</body>
+</html>

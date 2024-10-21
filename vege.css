@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.banner {
+    width: 100%;
+    height: 100%; 
+    background-position: center;
+    background-size:auto;
+    background-image: url('store/WhatsApp Image 2024-08-18 at 00.22.51_7e88ef75.jpg'), linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; 
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ff914d;
+    position: relative; 
+    z-index: 2; 
+}
+.navbar img {
+    height: 100px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 3px;
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+}
+#search-box {
+    width: 200px;
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.search-form .vege-search {
+    display: none;
+}
+.content {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: transparent;
+    min-height: 100vh;
+    overflow-y: auto; 
+    position: relative;
+    z-index: 3; 
+}
+.content h1 {
+    font-size: 60px;
+    font-weight: 800;
+    text-align: center;
+}
+button {
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #ff914d;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: rgb(0, 15, 226);
+    color: black;
+    transition: 0.5s;
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.product {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    background-color:blanchedalmond;
+}
+.product img {
+    width: 100%;
+    height: auto;
+}
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: black;
+}
+.product p {
+    font-size: 16px;
+    color: black;
+    margin: 10px 0;
+}
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+.quantity-controls button {
+    background-color: #ff914d;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.quantity-controls button:hover {
+    background-color:#ff914d;
+}
+.quantity-controls input {
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+.add-to-cart {
+    background-color: #ff914d;
+    height: fit-content;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+.add-to-cart:hover {
+    background-color: #e67e22;
+}
+.vegeclass h1 {
+    background-color: #ff914d;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}

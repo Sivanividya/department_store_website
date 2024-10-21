@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cart.css') }}">
+    <script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="nstore.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a href="profile.html">Profile</a>
+            <a href="logout.html">Logout</a>
+        </div>
+    </header>
+    
+    <div class="cart-content">
+        <h1>Your Cart</h1>
+
+        <!-- Cart Items -->
+        <div class="cart-items">
+            <h4> product name:<span id="data-product-name"></span></h4>
+            <h4> product price:<span id="data-product-price * quantity"></span></h4>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: ₹<span id="total-price">0.00</span></p>
+            <button class="place-order">Place Order</button>
+        </div>
+    </div>
+</body>
+</html>
